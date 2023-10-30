@@ -22,7 +22,7 @@ form.addEventListener('submit', (e) => {
         }
         else {
             form.reset()
-            window.location.href = '/templates/success.html'
+            window.location.href = '/success.html'
         }
     }
     else {
