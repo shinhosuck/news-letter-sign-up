@@ -1,0 +1,354 @@
+::before,
+::after,
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: hsl(235, 18%, 26%);
+}
+
+main {
+    min-height: 100vh;
+    display: grid;
+    align-items: start;
+}
+
+
+/* INDEX */
+.container {
+    position: relative;
+   background: hsl(0, 0%, 100%);
+   display: flex;
+   flex-direction: column;
+   justify-content: start;
+   min-height: 100vh;
+}
+
+.contents {
+    order: 2;
+    display: grid;
+    gap: 2rem;
+    padding: 2.5rem;
+}
+
+.content-header {
+    font-size: 3rem;
+    letter-spacing: 0.05rem;
+    color: hsl(234, 29%, 20%)
+}
+
+.content-text {
+    letter-spacing: 0.05rem;
+    line-height: 1.3;
+    color: hsl(235, 18%, 26%)
+}
+
+
+.list-contents {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.list-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.list-content > p {
+    letter-spacing: 0.05rem;
+    color: hsl(235, 18%, 26%)
+}
+
+.list-content > img {
+    width: 20px;
+    aspect-ratio: 1/1;
+    display: block;
+}
+
+.form {
+    display: grid;
+    gap: 0.5rem
+}
+
+.label-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form > .label-container > label {
+    letter-spacing: 0.05rem;
+    font-weight: 700;
+    color: hsl(234, 29%, 20%)
+}
+
+.error-text {
+    display: none;
+    color: hsl(4, 100%, 67%);
+    letter-spacing: 0.05rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.form > input[type='email'] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1.1rem;
+    letter-spacing: 0.05rem;
+    color: hsl(235, 18%, 26%);
+    border-radius: 8px;
+    font-size: 1rem;
+    border: 1px solid hsl(231, 7%, 60%)
+}
+
+.form > input[type='email']:focus {
+    outline: 2px solid hsl(235, 18%, 66%);
+}
+
+.error {
+    background: hsl(4, 100%, 90%);
+    color: hsl(4, 100%, 67%) !important;
+    border: 1px solid hsl(4, 100%, 67%) !important;
+}
+
+.error::placeholder {
+    color: hsl(4, 100%, 67%) !important;
+}
+
+.form > button {
+    border: none;
+    margin-top: 0.7rem;
+    padding: 1.2rem;
+    letter-spacing: 0.05rem;
+    color: hsl(0, 0%, 100%);
+    border-radius: 8px;
+    font-size: 1rem;
+    background: hsl(234, 29%, 20%);
+}
+
+.hero-img-container > 
+.lg-hero-img {
+    display: none !important;
+}
+
+.hero-img-container > img {
+    display: block;
+    width: 100%;
+}
+
+.lg-attribution {
+    display: none;
+}
+
+.attribution {
+    width: 95%;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 1rem 0;
+    color: hsl(0, 0%, 100%);
+    letter-spacing: 0.09rem;
+    text-wrap: balance;
+    line-height: 1.5;
+}
+
+.attribution > a {
+    color: rgb(161, 77, 240)
+}
+
+@media screen and (min-width: 700px) {
+    .content-header {
+        font-size: 3.4rem;
+    }
+}
+
+@media screen and (min-width: 835px) {
+    .mobile-hero-img {
+        display: none !important;
+    }
+
+    main {
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .container {
+        min-height: initial;
+        width: 95%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center; 
+        gap: 1.5rem;
+        padding: 1.3rem;
+        border-radius: 35px;
+    }
+
+    .contents {
+        flex: 1;
+        order: 1;
+        display: grid;
+        gap: 1.5rem;
+        padding: 2rem;
+    }
+    
+    .content-header {
+        font-size: 3rem;
+    }
+
+    .list-contents {
+        display: grid;
+        gap: 1rem;
+    }
+
+    .hero-img-container {
+        flex: 1;
+        order: 2;
+    }
+
+    .hero-img-container > 
+    .lg-hero-img {
+        display: block !important;
+    }
+   
+    .attribution {
+        display: none;
+    }
+
+    .lg-attribution {
+        display: block;
+        position: absolute;
+        z-index: 1;
+        bottom: 5px;
+        width: 100%;
+        padding: 0;
+        padding-left: 2rem;
+        text-align: start;
+        letter-spacing: 0.09rem;
+        color: hsl(234, 29%, 20%) !important;
+    }
+
+    .lg-attribution > a {
+        color: rgb(116, 0, 224)
+    }
+}
+
+@media screen and (min-width: 1000px) {
+
+    .container {
+        gap: 2rem;
+    }
+
+    .contents {
+        gap: 2rem;
+    }
+    
+    .content-header {
+        font-size: 3.4rem;
+    }
+
+    .list-contents {
+        gap: 1.5rem;
+    }
+}
+
+/* SUCCESS */
+
+.success-container {
+    background: hsl(0, 0%, 100%);
+    min-height: 100vh;
+    display: grid;
+    align-content: space-between;
+    padding: 0 1.5rem;
+    padding-top: 7rem;
+}
+
+.success-contents {
+    display: grid;
+    gap: 2rem;
+}
+
+.success-img-wrapper > img {
+    width: 50px;
+    display: block;
+}
+
+.success-text-wrapper {
+    display: grid;
+    gap: 2rem;
+}
+
+.success-text-wrapper > h1 {
+    letter-spacing: 0.05rem;
+    color: hsl(234, 29%, 20%);
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.success-text-wrapper > p {
+    letter-spacing: 0.09rem;
+    color: hsl(234, 29%, 20%);
+    line-height: 1.5;
+}
+
+.success-text-wrapper > p > strong {
+    font-weight: 700;
+}
+
+.success-message-btn-wrapper {
+    margin-bottom: 3rem;
+}
+
+.success-message-btn-wrapper > a {
+    display: block;
+    width: 100%;
+    padding: 1.2rem;
+    border-radius: 8px;
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+    background: hsl(234, 29%, 20%);
+    border: none;
+    font-weight: 700rem;
+    text-align: center;
+    font-size: 1rem;
+    letter-spacing: 0.05rem;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 500px) {
+
+    .success-main {
+        display: grid;
+        align-items: center;
+    }
+
+    .success-container {
+        min-height: initial;
+        width: 90%;
+        max-width: 500px;
+        margin: 0 auto;
+        display: grid;
+        align-content: center;
+        gap: 2rem;
+        padding: 3rem;
+        border-radius: 20px;
+    }
+
+    .success-message-btn-wrapper {
+        margin-bottom: 0rem;
+    }
+}
+
+@media screen and (min-width: 835px) {
+    .success-main {
+        display: grid;
+        align-items: center;
+        justify-content: initial;
+    }
+}

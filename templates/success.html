@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+
+    <title>Success</title>
+</head>
+<body>
+    <header></header>
+    <main class="success-main">
+
+        <div class="success-container">
+            <div class="success-contents">
+                <div class="success-img-wrapper">
+                    <img src="../assets/images/icon-success.svg" alt="">
+                </div>
+                <div class="success-text-wrapper">
+                    <h1>Thanks for subscribing!</h1>
+                    <p>
+                        A confirmation email has been sent to <strong>ash@loremcompany.com</strong>.
+                        Please open it and click the button inside to confirm your subscription.
+                    </p>
+                </div>
+            </div>
+            <div class="success-message-btn-wrapper">
+                <a href="/templates/index.html">Dismiss message</a>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+
+        const successContainer = document.querySelector('.success-container')
+
+        if(window.innerWidth < 500) {
+            successContainer.style.height = `${window.innerHeight}px`
+        }
+       
+        window.addEventListener('resize', (e) => {
+            if(window.innerWidth < 500) {
+                successContainer.style.height = `${window.innerHeight}px`
+            }else {
+                successContainer.style.height = 'initial'
+            }
+        })
+
+    </script>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
