@@ -17,6 +17,16 @@
     <title>Success</title>
 </head>
 <body>
+
+    <script>
+         const Email = JSON.parse(window.localStorage.getItem('email'))
+         if(!Email) {
+            const error = 'Email is required! Please enter your email.'
+            window.location.href = `/index.html`
+            window.localStorage.setItem('error_message', JSON.stringify(error))
+        }
+    </script>
+
     <header></header>
     <main class="success-main">
 
@@ -49,12 +59,6 @@
         dynamicEmail.textContent = newEmail
         window.localStorage.removeItem('error_message')
         window.localStorage.removeItem('email')
-
-        if(!newEmail) {
-            const error = 'Email is required! Please enter your email.'
-            window.location.href = `/index.html`
-            window.localStorage.setItem('error_message', JSON.stringify(error))
-        }
 
         if(window.innerWidth < 500) {
             successContainer.style.height = `${window.innerHeight}px`
