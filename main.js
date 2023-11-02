@@ -3,7 +3,7 @@
 const form = document.querySelector('#form')
 const email = document.querySelector('#email')
 const errorText = document.querySelector('.error-text')
-const regex = /[\\\/:*?"<>|$%{}`'^()#!]/;
+const regex = /[\\\/:*?"<>|$%{}`'^()#!&]/;
 
 let workingEmail = ''
 
