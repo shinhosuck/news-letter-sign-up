@@ -28,13 +28,13 @@
                 <div class="success-text-wrapper">
                     <h1>Thanks for subscribing!</h1>
                     <p>
-                        A confirmation email has been sent to <strong>ash@loremcompany.com</strong>.
+                        A confirmation email has been sent to <strong id="dynamic-email"></strong>.
                         Please open it and click the button inside to confirm your subscription.
                     </p>
                 </div>
             </div>
             <div class="success-message-btn-wrapper">
-                <a href="/index.html">Dismiss message</a>
+                <a class="dismiss-btn" href="/index.html">Dismiss message</a>
             </div>
         </div>
 
@@ -43,6 +43,18 @@
     <script>
 
         const successContainer = document.querySelector('.success-container')
+        const dynamicEmail = document.querySelector('#dynamic-email')
+
+        const newEmail = JSON.parse(window.localStorage.getItem('email'))
+        dynamicEmail.textContent = newEmail
+        window.localStorage.removeItem('error_message')
+        window.localStorage.removeItem('email')
+
+        if(!newEmail) {
+            const error = 'Email is required! Please enter your email.'
+            window.location.href = `/index.html`
+            window.localStorage.setItem('error_message', JSON.stringify(error))
+        }
 
         if(window.innerWidth < 500) {
             successContainer.style.height = `${window.innerHeight}px`
